@@ -1,7 +1,7 @@
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
-Baltimore<-subset(NEI, fips=="24510")Baltimore
+Baltimore<-subset(NEI, fips=="24510")
 emissions_by_year_Baltimore <- aggregate(Baltimore$Emissions, by=list(Baltimore$year), sum)
 emissions_by_year_Baltimore
 png('plot2.png')
